@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除缓存</title>
+</head>
+<body>
+    <h1>清除缓存</h1>
+    <p>请按 Ctrl+Shift+R (Windows) 或 Cmd+Shift+R (Mac) 强制刷新页面来清除缓存。</p>
+    <a href="index.html">返回首页</a>
+    
+    <script>
+        // 强制清除缓存并跳转到首页
+        setTimeout(() => {
+            window.location.href = 'index.html?' + new Date().getTime();
+        }, 2000);
+    </script>
+</body>
+</html>

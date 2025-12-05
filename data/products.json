@@ -1,0 +1,260 @@
+{
+  "categories": [
+    {
+      "id": "birthday-cake",
+      "name": "生日蛋糕",
+      "description": "为您的生日庆典增添甜蜜与惊喜",
+      "products": [
+        {
+          "id": 1,
+          "name": "草莓奶油蛋糕",
+          "description": "新鲜草莓搭配香浓奶油，口感绵密，甜而不腻",
+          "price": 168,
+          "original_price": 198,
+          "image": "images/products/strawberry-cake.jpg",
+          "tags": ["new", "hot"],
+          "sales": 1256,
+          "specs": {
+            "size": ["6寸", "8寸", "10寸", "12寸"],
+            "sweetness": ["正常甜", "少糖", "无糖"]
+          },
+          "detail": {
+            "story": "我们的草莓奶油蛋糕选用新鲜当季草莓，搭配进口动物奶油，每一口都是大自然的馈赠",
+            "ingredients": ["草莓", "动物奶油", "鸡蛋", "面粉", "细砂糖"],
+            "storage": "冷藏保存，24小时内食用最佳",
+            "allergens": ["鸡蛋", "小麦", "牛奶"],
+            "size_info": "6寸适合2-4人食用，8寸适合4-6人食用，10寸适合6-8人食用，12寸适合8-12人食用"
+          }
+        },
+        {
+          "id": 2,
+          "name": "巧克力慕斯蛋糕",
+          "description": "浓郁巧克力慕斯，口感丝滑，是巧克力爱好者的首选",
+          "price": 188,
+          "original_price": 218,
+          "image": "images/products/chocolate-mousse.jpg",
+          "tags": ["hot", "recommend"],
+          "sales": 987,
+          "specs": {
+            "size": ["6寸", "8寸", "10寸"],
+            "sweetness": ["正常甜", "少糖"]
+          },
+          "detail": {
+            "story": "选用比利时进口黑巧克力，精心制作的慕斯蛋糕，让您体验浓郁的巧克力风情",
+            "ingredients": ["黑巧克力", "淡奶油", "鸡蛋", "细砂糖"],
+            "storage": "冷藏保存，48小时内食用最佳",
+            "allergens": ["鸡蛋", "牛奶"],
+            "size_info": "6寸适合2-4人食用，8寸适合4-6人食用，10寸适合6-8人食用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "name": "面包点心",
+      "description": "新鲜出炉的面包，让您每天充满活力",
+      "products": [
+        {
+          "id": 3,
+          "name": "葡式蛋挞",
+          "description": "酥脆的蛋挞皮，搭配香滑的蛋奶馅，一口咬下去满是幸福",
+          "price": 12,
+          "original_price": 15,
+          "image": "images/products/portuguese-tart.jpg",
+          "tags": ["hot", "best-seller"],
+          "sales": 3567,
+          "specs": {
+            "quantity": ["单个", "6个装", "12个装"]
+          },
+          "detail": {
+            "story": "经典葡式蛋挞，采用传统配方制作，外酥内嫩，回味无穷",
+            "ingredients": ["面粉", "黄油", "鸡蛋", "牛奶", "细砂糖"],
+            "storage": "常温保存，24小时内食用最佳",
+            "allergens": ["鸡蛋", "小麦", "牛奶"],
+            "size_info": "单个重量约30g，6个装约180g，12个装约360g"
+          }
+        },
+        {
+          "id": 4,
+          "name": "牛角面包",
+          "description": "层层起酥的牛角面包，口感酥脆，香气四溢",
+          "price": 8,
+          "original_price": 10,
+          "image": "images/products/croissant.jpg",
+          "tags": ["new"],
+          "sales": 1890,
+          "specs": {
+            "quantity": ["单个", "4个装", "8个装"]
+          },
+          "detail": {
+            "story": "采用进口黄油制作，经过多次折叠起酥，口感酥脆，营养丰富",
+            "ingredients": ["面粉", "黄油", "鸡蛋", "牛奶", "酵母"],
+            "storage": "常温保存，24小时内食用最佳，或冷冻保存7天",
+            "allergens": ["鸡蛋", "小麦", "牛奶"],
+            "size_info": "单个重量约50g，4个装约200g，8个装约400g"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gift",
+      "name": "节日礼盒",
+      "description": "精美的礼盒包装，是送礼的最佳选择",
+      "products": [
+        {
+          "id": 5,
+          "name": "节日尊享礼盒",
+          "description": "包含多种经典糕点，适合节日送礼或家庭分享",
+          "price": 298,
+          "original_price": 358,
+          "image": "images/products/festival-gift.jpg",
+          "tags": ["gift", "recommend"],
+          "sales": 567,
+          "specs": {
+            "type": ["经典款", "豪华款"]
+          },
+          "detail": {
+            "story": "精心搭配的节日礼盒，包含多种经典糕点，是送礼的最佳选择",
+            "ingredients": ["面粉", "黄油", "鸡蛋", "牛奶", "巧克力", "水果"],
+            "storage": "常温保存，7天内食用最佳",
+            "allergens": ["鸡蛋", "小麦", "牛奶"],
+            "size_info": "礼盒重量约1.2kg，豪华款约1.5kg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afternoon-tea",
+      "name": "下午茶套餐",
+      "description": "精致的下午茶套餐，让您的下午时光更加美好",
+      "products": [
+        {
+          "id": 6,
+          "name": "双人下午茶套餐",
+          "description": "包含蛋糕、面包、饮品，适合双人分享",
+          "price": 98,
+          "original_price": 128,
+          "image": "images/products/afternoon-tea.jpg",
+          "tags": ["new", "hot"],
+          "sales": 892,
+          "specs": {
+            "tea": ["红茶", "绿茶", "咖啡"]
+          },
+          "detail": {
+            "story": "精致的双人下午茶套餐，让您和朋友共享美好时光",
+            "ingredients": ["蛋糕", "面包", "茶叶", "牛奶"],
+            "storage": "现做现吃，当天食用最佳",
+            "allergens": ["鸡蛋", "小麦", "牛奶"],
+            "size_info": "适合2人食用，包含2块蛋糕、4个面包、2杯饮品"
+          }
+        }
+      ]
+    }
+  ],
+  "flash_sale": [
+    {
+      "id": 7,
+      "name": "芒果慕斯蛋糕",
+      "description": "新鲜芒果搭配轻盈慕斯，口感清新",
+      "price": 138,
+      "original_price": 168,
+      "image": "images/products/mango-mousse.jpg",
+      "tags": ["flash-sale"],
+      "sales": 678,
+      "end_time": "2024-12-31T23:59:59"
+    },
+    {
+      "id": 8,
+      "name": "提拉米苏蛋糕",
+      "description": "经典意大利甜点，口感丰富，层次分明",
+      "price": 148,
+      "original_price": 188,
+      "image": "images/products/tiramisu.jpg",
+      "tags": ["flash-sale"],
+      "sales": 543,
+      "end_time": "2024-12-31T23:59:59"
+    }
+  ],
+  "best_sellers": [
+    {
+      "id": 1,
+      "name": "草莓奶油蛋糕",
+      "description": "新鲜草莓搭配香浓奶油，口感绵密",
+      "price": 168,
+      "image": "images/products/strawberry-cake.jpg",
+      "sales": 1256
+    },
+    {
+      "id": 3,
+      "name": "葡式蛋挞",
+      "description": "酥脆的蛋挞皮，搭配香滑的蛋奶馅",
+      "price": 12,
+      "image": "images/products/portuguese-tart.jpg",
+      "sales": 3567
+    },
+    {
+      "id": 2,
+      "name": "巧克力慕斯蛋糕",
+      "description": "浓郁巧克力慕斯，口感丝滑",
+      "price": 188,
+      "image": "images/products/chocolate-mousse.jpg",
+      "sales": 987
+    },
+    {
+      "id": 4,
+      "name": "牛角面包",
+      "description": "层层起酥的牛角面包，口感酥脆",
+      "price": 8,
+      "image": "images/products/croissant.jpg",
+      "sales": 1890
+    },
+    {
+      "id": 6,
+      "name": "双人下午茶套餐",
+      "description": "精致的下午茶套餐，适合双人分享",
+      "price": 98,
+      "image": "images/products/afternoon-tea.jpg",
+      "sales": 892
+    },
+    {
+      "id": 5,
+      "name": "节日尊享礼盒",
+      "description": "包含多种经典糕点，适合节日送礼",
+      "price": 298,
+      "image": "images/products/festival-gift.jpg",
+      "sales": 567
+    }
+  ],
+  "new_products": [
+    {
+      "id": 9,
+      "name": "抹茶红豆蛋糕",
+      "description": "清香抹茶搭配甜蜜红豆，口感丰富",
+      "price": 178,
+      "original_price": 208,
+      "image": "images/products/matcha-red-bean.jpg",
+      "tags": ["new"],
+      "sales": 345
+    },
+    {
+      "id": 10,
+      "name": "蓝莓芝士蛋糕",
+      "description": "浓郁芝士搭配新鲜蓝莓，酸甜可口",
+      "price": 198,
+      "original_price": 228,
+      "image": "images/products/blueberry-cheese.jpg",
+      "tags": ["new"],
+      "sales": 289
+    },
+    {
+      "id": 11,
+      "name": "海盐牛角面包",
+      "description": "咸香海盐搭配酥脆牛角，口感独特",
+      "price": 9,
+      "original_price": 12,
+      "image": "images/products/sea-salt-croissant.jpg",
+      "tags": ["new"],
+      "sales": 456
+    }
+  ]
+}

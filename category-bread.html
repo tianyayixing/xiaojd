@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面包点心 - 小金豆</title>
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="images/icons/logo.png" alt="小金豆">
+                    <span>小金豆</span>
+                </a>
+                
+                <!-- 主导航菜单 -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-birthday-cake.html" class="nav-link">生日蛋糕</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-bread.html" class="nav-link">面包点心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-gift.html" class="nav-link">节日礼盒</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-afternoon-tea.html" class="nav-link">下午茶套餐</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">关于我们</a>
+                    </li>
+                </ul>
+                
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="搜索商品...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 分类页头部 -->
+        <section class="category-header">
+            <div class="container">
+                <h1 class="category-title">面包点心</h1>
+                <p class="category-desc">新鲜出炉的面包，让您每天充满活力</p>
+            </div>
+        </section>
+
+        <!-- 筛选与排序 -->
+        <section class="filter-sort">
+            <div class="container">
+                <div class="filter-sort-content">
+                    <!-- 筛选选项 -->
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <span class="filter-label">类型</span>
+                            <span class="filter-item active" data-filter="all">全部</span>
+                            <span class="filter-item" data-filter="tart">蛋挞</span>
+                            <span class="filter-item" data-filter="croissant">牛角面包</span>
+                            <span class="filter-item" data-filter="bun">小面包</span>
+                            <span class="filter-item" data-filter="cake">蛋糕</span>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <span class="filter-label">口味</span>
+                            <span class="filter-item" data-filter="sweet">甜味</span>
+                            <span class="filter-item" data-filter="savory">咸味</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 排序选项 -->
+                    <div class="sort-options">
+                        <span class="filter-label">排序</span>
+                        <span class="sort-item active" data-sort="default">默认</span>
+                        <span class="sort-item" data-sort="sales">销量优先</span>
+                        <span class="sort-item" data-sort="price_asc">价格从低到高</span>
+                        <span class="sort-item" data-sort="price_desc">价格从高到低</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 商品列表 -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- 面包点心1 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img data-src="images/products/portuguese-tart.jpg" alt="葡式蛋挞" class="lazy-loading">
+                            <div class="tag tag-hot">HOT</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">葡式蛋挞</h3>
+                            <p class="product-desc">酥脆的蛋挞皮，搭配香滑的蛋奶馅，一口咬下去满是幸福</p>
+                            <div class="product-price">
+                                <span class="price-now">¥12</span>
+                                <span class="price-original">¥15</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 面包点心2 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img data-src="images/products/croissant.jpg" alt="牛角面包" class="lazy-loading">
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">牛角面包</h3>
+                            <p class="product-desc">层层起酥的牛角面包，口感酥脆，香气四溢</p>
+                            <div class="product-price">
+                                <span class="price-now">¥8</span>
+                                <span class="price-original">¥10</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 面包点心3 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img data-src="images/products/sea-salt-croissant.jpg" alt="海盐牛角面包" class="lazy-loading">
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">海盐牛角面包</h3>
+                            <p class="product-desc">咸香海盐搭配酥脆牛角，口感独特</p>
+                            <div class="product-price">
+                                <span class="price-now">¥9</span>
+                                <span class="price-original">¥12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 面包点心4 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="images/products/chocolate-croissant.jpg" alt="巧克力牛角面包" class="lazy-loading">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">巧克力牛角面包</h3>
+                            <p class="product-desc">内馅饱满的巧克力，搭配酥脆的牛角面包</p>
+                            <div class="product-price">
+                                <span class="price-now">¥10</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 面包点心5 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="images/products/milk-bun.jpg" alt="牛奶小面包" class="lazy-loading">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">牛奶小面包</h3>
+                            <p class="product-desc">柔软蓬松，奶香浓郁，适合早餐食用</p>
+                            <div class="product-price">
+                                <span class="price-now">¥6</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 面包点心6 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="images/products/cheese-tart.jpg" alt="芝士蛋挞" class="lazy-loading">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">芝士蛋挞</h3>
+                            <p class="product-desc">浓郁芝士馅，外酥内嫩，口感丰富</p>
+                            <div class="product-price">
+                                <span class="price-now">¥15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 关于我们 -->
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about-us.html">品牌故事</a></li>
+                        <li><a href="about-us.html#team">团队介绍</a></li>
+                        <li><a href="about-us.html#awards">荣誉证书</a></li>
+                        <li><a href="about-us.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 配送与须知 -->
+                <div class="footer-column">
+                    <h3>配送与须知</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping-info.html">配送范围</a></li>
+                        <li><a href="shipping-info.html#delivery-time">配送时间</a></li>
+                        <li><a href="shipping-info.html#payment">支付方式</a></li>
+                        <li><a href="shipping-info.html#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>138-xxxx-xxxx</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@xiaojindou.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>北京市朝阳区建国路88号</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>营业时间：08:00-20:00</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- 社交媒体 -->
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 订阅 newsletter -->
+                <div class="footer-column">
+                    <h3>订阅 Newsletter</h3>
+                    <p style="color: #CCCCCC; margin-bottom: 20px;">订阅我们的 newsletter，获取最新优惠和活动信息</p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="您的邮箱地址" style="flex: 1; padding: 10px; border: 1px solid #555; border-radius: 4px 0 0 4px; background-color: #444; color: #FFFFFF;">
+                        <button style="padding: 10px 20px; background-color: var(--secondary-color); color: #FFFFFF; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">订阅</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 小金豆. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调试页面</title>
+</head>
+<body>
+    <h1>调试页面</h1>
+    <p>这是一个用于调试JavaScript语法错误的测试页面。</p>
+
+    <!-- 逐步添加JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <!-- <script src="js/carousel.js"></script> -->
+    <!-- <script src="js/search.js"></script> -->
+    <!-- <script src="js/product.js"></script> -->
+
+    <!-- 倒计时脚本 -->
+    <!-- <script>
+        // 倒计时功能
+        function startCountdown() {
+            // 设置倒计时结束时间（24小时后）
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 24);
+            
+            const countdownInterval = setInterval(() => {
+                const now = new Date();
+                const difference = endTime - now;
+                
+                if (difference <= 0) {
+                    // 倒计时结束
+                    clearInterval(countdownInterval);
+                    return;
+                }
+                
+                // 计算剩余时间
+                const hours = Math.floor(difference / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                // 更新倒计时显示
+                console.log(`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+            }, 1000);
+        }
+        
+        // 页面加载完成后启动倒计时
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script> -->
+</body>
+</html>

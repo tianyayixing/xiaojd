@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+</head>
+<body>
+    <h1>测试页面</h1>
+    
+    <!-- 测试1：仅包含App对象定义 -->
+    <script>
+        // 全局App对象定义
+        const App = {
+            modules: [],
+            registerModule: function(module) {
+                this.modules.push(module);
+            },
+            init: function() {
+                this.modules.forEach(module => {
+                    if (typeof module === 'function') {
+                        module();
+                    }
+                });
+            },
+            utils: {
+                // 工具函数集合
+                throttle: function(func, delay) {
+                    let lastCall = 0;
+                    return function(...args) {
+                        const now = new Date().getTime();
+                        if (now - lastCall < delay) {
+                            return;
+                        }
+                        lastCall = now;
+                        return func.apply(this, args);
+                    };
+                },
+                debounce: function(func, delay) {
+                    let timeoutId;
+                    return function(...args) {
+                        clearTimeout(timeoutId);
+                        timeoutId = setTimeout(() => func.apply(this, args), delay);
+                    };
+                },
+                isElementInViewport: function(element) {
+                    const rect = element.getBoundingClientRect();
+                    return (
+                        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.bottom >= 0 &&
+                        rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+                        rect.right >= 0
+                    );
+                },
+                smoothScroll: function(target) {
+                    const element = document.querySelector(target);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                },
+                formatPrice: function(price) {
+                    return '¥' + parseFloat(price).toFixed(2);
+                },
+                generateUniqueId: function() {
+                    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+                },
+                getCookie: function(name) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; ${name}=`);
+                    if (parts.length === 2) return parts.pop().split(';').shift();
+                },
+                setCookie: function(name, value, days) {
+                    let expires = '';
+                    if (days) {
+                        const date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = '; expires=' + date.toUTCString();
+                    }
+                    document.cookie = name + '=' + (value || '') + expires + '; path=/';
+                },
+                removeCookie: function(name) {
+                    document.cookie = name + '=; Max-Age=-99999999; path=/';
+                }
+            }
+        };
+    </script>
+    
+    <!-- 测试2：添加页面过渡与动画模块 -->
+    <script>
+        // 页面过渡与动画模块
+        function modulePageTransitions() {
+            // 页面加载动画
+            document.body.classList.add('page-transition');
+            
+            // 平滑滚动到锚点
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    App.utils.smoothScroll(targetId);
+                });
+            });
+            
+            // 滚动动画实现
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const checkFadeElements = App.utils.throttle(() => {
+                fadeElements.forEach(element => {
+                    if (App.utils.isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }, 100);
+            
+            // 添加滚动事件监听器
+            window.addEventListener('scroll', checkFadeElements);
+            
+            // 初始检查
+            checkFadeElements();
+        }
+        
+        // 注册模块
+        App.registerModule(modulePageTransitions);
+    </script>
+    
+    <!-- 测试3：添加移动端导航菜单模块 -->
+    <script>
+        // 移动端导航菜单模块
+        function initMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            // 创建遮罩层
+            const overlay = document.createElement('div');
+            overlay.className = 'nav-overlay';
+            document.body.appendChild(overlay);
+            
+            // 点击菜单按钮切换菜单显示
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+                
+                // 切换图标
+                const icon = menuToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // 点击遮罩层关闭菜单
+            overlay.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                // 恢复图标
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+            
+            // 点击导航链接关闭菜单
+            const navLinks = navMenu.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    
+                    // 恢复图标
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+        
+        // 注册模块
+        App.registerModule(initMobileMenu);
+    </script>
+    
+    <!-- 初始化所有模块 -->
+    <script>
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                App.init();
+            });
+        } else {
+            // 页面已经加载完成，直接初始化
+            App.init();
+        }
+    </script>
+</body>
+</html>

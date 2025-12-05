@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小金豆 - 新鲜、精致、准时</title>
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- 网站Logo -->
+                <a href="index.html" class="logo">
+                    <img src="images/icons/logo.png" alt="小金豆">
+                    <span>小金豆</span>
+                </a>
+                
+                <!-- 汉堡菜单按钮 -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- 导航菜单 -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-birthday-cake.html" class="nav-link">生日蛋糕</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-bread.html" class="nav-link">面包点心</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-gift.html" class="nav-link">节日礼盒</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category-afternoon-tea.html" class="nav-link">下午茶套餐</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">关于我们</a>
+                    </li>
+                </ul>
+                
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索商品...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <!-- 搜索建议容器 -->
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- Banner轮播 -->
+        <section class="banner">
+            <div class="banner-slider">
+                <!-- Banner项1 -->
+                <div class="banner-item">
+                    <img src="images/banner/summer-campaign.png" alt="夏季促销活动">
+                    <a href="campaign-summer.html" class="banner-link-full"></a>
+                    <div class="banner-content">
+                        <h2 class="banner-title">夏季甜蜜促销</h2>
+                        <p class="banner-desc">全场蛋糕8折起，限时优惠</p>
+                        <a href="campaign-summer.html" class="banner-link">立即查看</a>
+                    </div>
+                </div>
+                
+                <!-- Banner项2 -->
+                <div class="banner-item">
+                    <img src="images/banner/birthday-cake.png" alt="生日蛋糕专区">
+                    <a href="category-birthday-cake.html" class="banner-link-full"></a>
+                    <div class="banner-content">
+                        <h2 class="banner-title">生日蛋糕专区</h2>
+                        <p class="banner-desc">为您的生日增添甜蜜与惊喜</p>
+                        <a href="category-birthday-cake.html" class="banner-link">查看全部</a>
+                    </div>
+                </div>
+                
+                <!-- Banner项3 -->
+                <div class="banner-item">
+                    <img src="images/banner/festival-gift.png" alt="节日礼盒">
+                    <a href="category-gift.html" class="banner-link-full"></a>
+                    <div class="banner-content">
+                        <h2 class="banner-title">节日尊享礼盒</h2>
+                        <p class="banner-desc">精美礼盒，送礼首选</p>
+                        <a href="category-gift.html" class="banner-link">查看礼盒</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner箭头 -->
+            <div class="banner-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="banner-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <!-- Banner指示器 -->
+            <div class="banner-indicators"></div>
+        </section>
+
+        <!-- 金刚区 -->
+        <section class="kingkong">
+            <div class="container">
+                <h2 class="kingkong-title">快速导航</h2>
+                <ul class="kingkong-list">
+                    <li class="kingkong-item">
+                        <a href="category-birthday-cake.html">
+                            <div class="kingkong-icon">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <span class="kingkong-text">生日蛋糕</span>
+                        </a>
+                    </li>
+                    <li class="kingkong-item">
+                        <a href="category-bread.html">
+                            <div class="kingkong-icon">
+                                <i class="fas fa-bread-slice"></i>
+                            </div>
+                            <span class="kingkong-text">现烤面包</span>
+                        </a>
+                    </li>
+                    <li class="kingkong-item">
+                        <a href="category-afternoon-tea.html">
+                            <div class="kingkong-icon">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <span class="kingkong-text">下午茶</span>
+                        </a>
+                    </li>
+                    <li class="kingkong-item">
+                        <a href="category-gift.html">
+                            <div class="kingkong-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <span class="kingkong-text">节日礼盒</span>
+                        </a>
+                    </li>
+                    <li class="kingkong-item">
+                        <a href="category-all.html">
+                            <div class="kingkong-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <span class="kingkong-text">企业订购</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 限时秒杀 -->
+        <section class="flash-sale">
+            <div class="container">
+                <div class="flash-sale-header">
+                    <h2 class="flash-sale-title">限时秒杀</h2>
+                    <div class="countdown">
+                        <span class="countdown-label">距离结束</span>
+                        <div class="countdown-item">
+                            <span class="countdown-time" id="hours">23</span>
+                            <span class="countdown-unit">时</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-time" id="minutes">59</span>
+                            <span class="countdown-unit">分</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-time" id="seconds">59</span>
+                            <span class="countdown-unit">秒</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- 秒杀商品1 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/mango-mousse.png" alt="芒果慕斯蛋糕" class="lazy-loading"></a>
+                            <div class="tag tag-sale">8折</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">芒果慕斯蛋糕</a></h3>
+                            <p class="product-desc">新鲜芒果搭配轻盈慕斯，口感清新</p>
+                            <div class="product-price">
+                                <span class="price-now">¥138</span>
+                                <span class="price-original">¥168</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 秒杀商品2 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/tiramisu.png" alt="提拉米苏蛋糕" class="lazy-loading"></a>
+                            <div class="tag tag-sale">8折</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">提拉米苏蛋糕</a></h3>
+                            <p class="product-desc">经典意大利甜点，口感丰富，层次分明</p>
+                            <div class="product-price">
+                                <span class="price-now">¥148</span>
+                                <span class="price-original">¥188</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 秒杀商品3 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/portuguese-tart.png" alt="葡式蛋挞" class="lazy-loading"></a>
+                            <div class="tag tag-sale">8.5折</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">葡式蛋挞</a></h3>
+                            <p class="product-desc">酥脆的蛋挞皮，搭配香滑的蛋奶馅</p>
+                            <div class="product-price">
+                                <span class="price-now">¥9.9</span>
+                                <span class="price-original">¥12</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 秒杀商品4 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/croissant.png" alt="牛角面包" class="lazy-loading"></a>
+                            <div class="tag tag-sale">8.5折</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">牛角面包</a></h3>
+                            <p class="product-desc">层层起酥的牛角面包，口感酥脆</p>
+                            <div class="product-price">
+                                <span class="price-now">¥6.8</span>
+                                <span class="price-original">¥8</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热销榜单 -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">热销榜单</h2>
+                <p class="section-subtitle">最受顾客欢迎的商品</p>
+                
+                <div class="products-grid">
+                    <!-- 热销商品1 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">1</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/strawberry-cake.png" alt="草莓奶油蛋糕" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">草莓奶油蛋糕</a></h3>
+                            <p class="product-desc">新鲜草莓搭配香浓奶油，口感绵密</p>
+                            <div class="product-price">
+                                <span class="price-now">¥168</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品2 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">2</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/portuguese-tart.png" alt="葡式蛋挞" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">葡式蛋挞</a></h3>
+                            <p class="product-desc">酥脆的蛋挞皮，搭配香滑的蛋奶馅</p>
+                            <div class="product-price">
+                                <span class="price-now">¥12</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品3 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">3</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/chocolate-mousse.png" alt="巧克力慕斯蛋糕" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">巧克力慕斯蛋糕</a></h3>
+                            <p class="product-desc">浓郁巧克力慕斯，口感丝滑</p>
+                            <div class="product-price">
+                                <span class="price-now">¥188</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品4 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">4</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/croissant.png" alt="牛角面包" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">牛角面包</a></h3>
+                            <p class="product-desc">层层起酥的牛角面包，口感酥脆</p>
+                            <div class="product-price">
+                                <span class="price-now">¥8</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品5 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">5</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/strawberry-cake.png" alt="双人下午茶套餐" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">双人下午茶套餐</a></h3>
+                            <p class="product-desc">精致的下午茶套餐，适合双人分享</p>
+                            <div class="product-price">
+                                <span class="price-now">¥98</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品6 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">6</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/croissant.png" alt="节日尊享礼盒" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">节日尊享礼盒</a></h3>
+                            <p class="product-desc">包含多种经典糕点，适合节日送礼</p>
+                            <div class="product-price">
+                                <span class="price-now">¥298</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品7 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">7</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/chocolate-mousse.png" alt="芒果慕斯蛋糕" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">芒果慕斯蛋糕</a></h3>
+                            <p class="product-desc">新鲜芒果搭配轻盈慕斯，口感清新</p>
+                            <div class="product-price">
+                                <span class="price-now">¥138</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热销商品8 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <div class="tag-rank">8</div>
+                            <a href="product-detail-1.html"><img data-src="images/products/croissant.png" alt="提拉米苏蛋糕" class="lazy-loading"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">提拉米苏蛋糕</a></h3>
+                            <p class="product-desc">经典意大利甜点，口感丰富，层次分明</p>
+                            <div class="product-price">
+                                <span class="price-now">¥148</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 新品推荐 -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">新品推荐</h2>
+                <p class="section-subtitle">最新上市的美味糕点</p>
+                
+                <div class="products-grid">
+                    <!-- 新品1 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="images/products/chocolate-mousse.png" alt="抹茶红豆蛋糕" class="lazy-loading">
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">抹茶红豆蛋糕</h3>
+                            <p class="product-desc">清香抹茶搭配甜蜜红豆，口感丰富</p>
+                            <div class="product-price">
+                                <span class="price-now">¥178</span>
+                                <span class="price-original">¥208</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 新品2 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="images/products/croissant.png" alt="蓝莓芝士蛋糕" class="lazy-loading">
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">蓝莓芝士蛋糕</h3>
+                            <p class="product-desc">浓郁芝士搭配新鲜蓝莓，酸甜可口</p>
+                            <div class="product-price">
+                                <span class="price-now">¥198</span>
+                                <span class="price-original">¥228</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 新品3 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/strawberry-cake.png" alt="海盐牛角面包" class="lazy-loading"></a>
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">海盐牛角面包</a></h3>
+                            <p class="product-desc">咸香海盐搭配酥脆牛角，口感独特</p>
+                            <div class="product-price">
+                                <span class="price-now">¥9</span>
+                                <span class="price-original">¥12</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 新品4 -->
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <a href="product-detail-1.html"><img data-src="images/products/croissant.png" alt="草莓慕斯蛋糕" class="lazy-loading"></a>
+                            <div class="tag tag-new">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name"><a href="product-detail-1.html">草莓慕斯蛋糕</a></h3>
+                            <p class="product-desc">新鲜草莓与轻盈慕斯的完美结合，酸甜可口</p>
+                            <div class="product-price">
+                                <span class="price-now">¥188</span>
+                                <span class="price-original">¥218</span>
+                            </div>
+                            <a href="product-detail-1.html" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 关于我们 -->
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about-us.html">品牌故事</a></li>
+                        <li><a href="about-us.html#team">团队介绍</a></li>
+                        <li><a href="about-us.html#awards">荣誉证书</a></li>
+                        <li><a href="about-us.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 配送与须知 -->
+                <div class="footer-column">
+                    <h3>配送与须知</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping-info.html">配送范围</a></li>
+                        <li><a href="shipping-info.html#delivery-time">配送时间</a></li>
+                        <li><a href="shipping-info.html#payment">支付方式</a></li>
+                        <li><a href="shipping-info.html#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>138-xxxx-xxxx</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@xiaojindou.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>海口市龙华区农垦路</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>营业时间：08:00-20:00</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- 社交媒体 -->
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 订阅 newsletter -->
+                <div class="footer-column">
+                    <h3>订阅 Newsletter</h3>
+                    <p style="color: #CCCCCC; margin-bottom: 20px;">订阅我们的 newsletter，获取最新优惠和活动信息</p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="您的邮箱地址" style="flex: 1; padding: 10px; border: 1px solid #555; border-radius: 4px 0 0 4px; background-color: #444; color: #FFFFFF;">
+                        <button style="padding: 10px 20px; background-color: var(--secondary-color); color: #FFFFFF; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">订阅</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 版权信息 -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 小金豆. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/product.js"></script>
+    
+    <!-- 倒计时脚本 -->
+    <script>
+        // 倒计时功能
+        function startCountdown() {
+            // 设置倒计时结束时间（24小时后）
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 24);
+            
+            const countdownInterval = setInterval(() => {
+                const now = new Date();
+                const difference = endTime - now;
+                
+                if (difference <= 0) {
+                    // 倒计时结束
+                    clearInterval(countdownInterval);
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+                
+                // 计算剩余时间
+                const hours = Math.floor(difference / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                // 更新倒计时显示
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        // 页面加载完成后启动倒计时
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+</body>
+</html>
