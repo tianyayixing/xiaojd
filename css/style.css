@@ -227,12 +227,14 @@ a:hover {
     color: #D2691E; /* 直接使用颜色值，确保文字可见 */
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: var(--transition);
     letter-spacing: normal;
     white-space: nowrap;
     overflow: visible;
     width: auto;
+    height: 100%;
 }
 
 .logo:hover {
@@ -269,9 +271,11 @@ a:hover {
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 140px;
+    height: 70px;
+    margin-right: 0;
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
 
 
@@ -556,6 +560,9 @@ a:hover {
     height: 100%;
     text-decoration: none;
     z-index: 5;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 /* 确保banner内容在链接上方 */
@@ -643,11 +650,14 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: var(--transition);
-    padding: 24px;
+    padding: 20px;
     border-radius: var(--border-radius);
     min-width: 120px;
+    width: 120px;
+    text-align: center;
 }
 
 .kingkong-item:hover {
@@ -656,20 +666,31 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
+.kingkong-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
 .kingkong-icon {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
     background: linear-gradient(135deg, var(--bg-light), var(--primary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 32px;
     color: var(--secondary-color);
     transition: var(--transition);
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
 }
 
 .kingkong-item:hover .kingkong-icon {
@@ -683,6 +704,10 @@ a:hover {
     font-weight: 600;
     color: var(--text-color);
     text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
 }
 
 /* 特色栏目 */
